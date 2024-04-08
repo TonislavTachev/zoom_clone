@@ -114,13 +114,15 @@ const MeetingTypeList = () => {
     <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       {meetingTypes.map((item, index) => {
         return (
-          <HomeCard
-            title={item.title}
-            description={item.description}
-            img={item.img}
-            handleClick={item.action}
-            className={item.className}
-          />
+          <React.Fragment key={index}>
+            <HomeCard
+              title={item.title}
+              description={item.description}
+              img={item.img}
+              handleClick={item.action}
+              className={item.className}
+            />
+          </React.Fragment>
         );
       })}
 
